@@ -1,0 +1,32 @@
+-- Clients
+INSERT INTO client (client_id, name, email, phone_number, cpr, allergies, insurance) VALUES
+(1, 'Laura Andresen', 'laura@example.com', '12345678', '010101-1234', 'None', 'Yes'),
+(2, 'Kasper Jensen', 'kasper@example.com', '87654321', '020202-4321', 'Pollen', 'No');
+
+-- Admin
+INSERT INTO admin (admin_id, username, password) VALUES
+    (1, 'admin', 'test123');
+
+-- Request
+INSERT INTO request (request_id, name, email, phone_number, message, is_seen, created_date) VALUES
+(1, 'Line Madsen', 'line@example.com', '11112222', 'Jeg vil gerne booke tid', false, CURRENT_DATE),
+(2, 'Ole Hansen', 'ole@example.com', '33334444', 'Spørgsmål om behandling', true, CURRENT_DATE);
+
+-- Booking
+INSERT INTO booking (booking_id, client_id, treatment, date, time, notes) VALUES
+(1, 1, 'Fodbehandling', '2025-05-10', '10:00:00', 'Første besøg'),
+(2, 2, 'Indlægskonsultation', '2025-05-12', '13:30:00', 'Allergi-anamnese');
+
+-- Client visits
+INSERT INTO client_visit (visit_id, client_id, date, notes) VALUES
+(1, 1, '2025-04-15', 'Opfølgning – alt OK'),
+(2, 2, '2025-04-20', 'Anbefalet nye indlæg');
+
+-- Insole booking
+INSERT INTO insole_booking (insole_id, name, email, phone_number, cpr, date, time) VALUES
+(1, 'Kasper Jensen', 'kasper@example.com', '87654321', '020202-4321', '2025-05-18', '09:00:00');
+
+-- Calendar events
+INSERT INTO calender_event (event_id, booking_id, insole_id, title, start, all_day, extended_props) VALUES
+(1, 1, null, 'Fodbehandling - Laura', '2025-05-10T10:00:00', false, 'note1'),
+(2, null, 1, 'Indlæg – Kasper', '2025-05-18T09:00:00', false, 'note2');
