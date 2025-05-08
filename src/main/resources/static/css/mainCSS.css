@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Playfair Display', serif;
+}
+
+body {
+    background-color: #fefaf6;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+    color: #5e3c2d;
+}
+
+.topbar {
+    background-color: #3a2418;
+    color: #fff;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    padding: 1.5rem;
+    position: relative;
+}
+
+.topbar-content {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.topbar-text {
+    margin-right: 0.5rem;
+}
+
+.topbar-phone {
+    background-color: #ffffff;
+    color: #000;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.topbar-icon {
+    position: absolute;
+    right: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 1.2rem;
+    text-decoration: none;
+    padding: 5px;
+}
+
+.topbar-icon:hover {
+    color: #82e0aa;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0.5rem 3rem 1rem 3rem;
+    background-color: #e8e4e0;
+}
+
+.logo {
+    color: #5e3c2d;
+    font-family: 'Playfair Display', serif;
+    line-height: 1.2;
+}
+
+.logo-main {
+    font-size: 5rem;
+    font-weight: bold;
+    display: block;
+}
+
+.logo-sub {
+    font-size: 3rem;
+    font-weight: bold;
+    font-style: italic;
+    color: rgba(94, 60, 45, 0.69);
+    margin-left: 2rem;
+    margin-top: -1.6rem;
+    display: block;
+}
+
+.nav-items {
+    display: flex;
+    align-items: flex-start;
+    border-bottom: 2px solid #cfa99a;
+    margin-top: 2rem;
+    padding-bottom: 3px;
+}
+
+.nav-items a {
+    text-decoration: none;
+    color: #5e3c2d;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    font-size: 1.3rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-items a:hover {
+    background-color: rgba(94, 60, 45, 0.05);
+    color: #3a2418;
+}
+
+button {
+    padding: 1rem 5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border: 2px solid #5e3c2d;
+    color: rgb(94, 60, 45);
+    background: transparent;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: #5e3c2d;
+    color: #fff;
+}
