@@ -168,3 +168,20 @@ button:hover {
 .footer a:hover {
     text-decoration: underline;
 }
+
+.about-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.about-image {
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.about-text {
+    max-width: 700px;
+}
