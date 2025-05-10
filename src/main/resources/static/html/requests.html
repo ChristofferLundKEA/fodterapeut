@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Requests</title>
+    <link rel="stylesheet" href="/css/dashCSS.css">
+</head>
+<body>
+
+<div class="dashboard-layout">
+    <div id="sidebar"></div>
+
+    <main class="main-content">
+        <h1 class="dashboard-title">Requests</h1>
+        <section class="requests-section">
+            <h2>📥 Unseen</h2>
+            <table id="unseen-requests" class="requests-table">
+                <thead>
+                <tr>
+                    <th>Navn</th>
+                    <th>Email</th>
+                    <th>Telefon</th>
+                    <th>Besked</th>
+                    <th>Dato</th>
+                </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+
+        <section class="requests-section" style="margin-top: 40px;">
+            <h2>✅ Seen</h2>
+            <table id="seen-requests" class="requests-table">
+                <thead>
+                <tr>
+                    <th>Navn</th>
+                    <th>Email</th>
+                    <th>Telefon</th>
+                    <th>Besked</th>
+                    <th>Dato</th>
+                </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+    </main>
+</div>
+
+<script src="/js/dash-layout-loader.js"></script>
+<script src="/js/request.js"></script>
+</body>
+</html>
