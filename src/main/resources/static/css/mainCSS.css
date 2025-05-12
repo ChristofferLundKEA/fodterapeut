@@ -178,17 +178,6 @@ button:hover {
     padding: 3rem 1rem;
 }
 
-.about-container {
-    display: flex;
-    align-items: flex-start;
-    gap: 2rem;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 2rem;
-    background-color: #fffdfb;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-}
 
 .about-image {
     max-width: 300px;
@@ -216,6 +205,30 @@ button:hover {
     line-height: 1.7;
     color: #3f2d24;
 }
+
+.about-container {
+    display: flex;
+    flex-direction: column; /* ændret fra flex-row til column */
+    gap: 3rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #fffdfb;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.about-block {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.about-block.reverse {
+    flex-direction: row-reverse;
+}
+
 
 
 .behandlinger-sektion {
