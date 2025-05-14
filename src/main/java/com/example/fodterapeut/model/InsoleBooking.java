@@ -3,6 +3,7 @@ package com.example.fodterapeut.model;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.util.List;
 
@@ -16,9 +17,9 @@ public class InsoleBooking {
     private String name;
     private String email;
     private String phone_number;
-    private String cpr;
     private LocalDate date;
-    private LocalTime time;
+    private LocalDateTime start;
+    private LocalDateTime endTime;
 
     @OneToMany(mappedBy = "insoleBooking", cascade = CascadeType.ALL)
     private List<CalenderEvent> calenderEvents;

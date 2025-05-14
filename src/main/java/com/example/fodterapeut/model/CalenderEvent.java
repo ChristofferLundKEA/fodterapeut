@@ -2,6 +2,8 @@ package com.example.fodterapeut.model;
 
 import jakarta.persistence.*;
 
+import java.time.LocalDateTime;
+
 @Entity
 public class CalenderEvent {
 
@@ -10,9 +12,10 @@ public class CalenderEvent {
     private int event_id;
 
     private String title;
-    private String start;
+    private LocalDateTime start;
+    private LocalDateTime endTime;
     private Boolean allDay;
-    private String extendedProps;
+    private String description;
 
     @ManyToOne
     @JoinColumn(name = "booking_id")

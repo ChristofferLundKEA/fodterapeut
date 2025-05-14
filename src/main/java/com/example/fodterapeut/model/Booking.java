@@ -3,6 +3,7 @@ package com.example.fodterapeut.model;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.util.List;
 
@@ -15,8 +16,9 @@ public class Booking {
 
     private String treatment;
     private LocalDate date;
-    private LocalTime time;
-    private String notes;
+    private LocalDateTime start;
+    private LocalDateTime endTime;
+    private String description;
 
     @ManyToOne
     @JoinColumn(name = "client_id")
