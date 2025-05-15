@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Om Klinikken</title>
+  <title>Kontakt</title>
   <link rel="stylesheet" href="/css/mainCSS.css">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
 </head>
@@ -16,29 +16,43 @@
 <div id="navbar"></div>
 
 
-<main class="main-section">
+<main class="contact-main-section">
   <div class="contact-container">
-    <h3>Afbud</h3>
-    <p>something something</p>
+    <div class="urgent-column">
+      <h1>Send os en besked</h1>
+      <p>something something</p><br>
+      <button type="button" id="request_button">Besked formular</button>
+    </div>
 
-    <h3>LUND Klinik for Fodterapi</h3>
-    <p>Magnolievej 17</p>
-    <p>3620 Jægerspris</p>
-    <p>📞 38 87 00 89</p>
-    <p>📧 <a href="mailto:info@lund-fodterapi.dk">info@lund-fodterapi.dk</a></p>
+    <div class="afbud-column">
+    <h1>Afbud</h1>
+    <p>something something</p>
+    </div>
+
+    <div class="contact-column">
+      <h1>ÅBNINGSTIDER</h1>
+      <p>Mandag - 8:00 – 17:00<br>
+      <p>Tirsdag - 8:00 – 17:00<br>
+      <p>Onsdag - 8:00 – 17:00<br>
+      <p>Torsdag - 8:00 – 17:00<br>
+      <p>Fredag - 8:00 – 17:00<br>
+      <p>Lørdag - Lukket<br>
+      <p>Søndag - Lukket</p>
+      <p>Ring til os eller send en forespørgsel for at booke en tid.</p>
+    </div>
+
+    <div class="address-column">
+      <h1>LUND Klinik for Fodterapi</h1>
+      <p>Magnolievej 17</p>
+      <p>3620 Jægerspris</p>
+      <p>📞 38 87 00 89</p>
+      <p>📧 <a href="mailto:info@lund-fodterapi.dk">info@lund-fodterapi.dk</a></p>
+    </div>
+    <img src="/images/contact-map.png" alt="contact-map" >
+
   </div>
-  <div class="contact-column">
-    <h3>KLINIKKENS ÅBNINGSTIDER</h3>
-    <p>Mandag - 8:00 – 17:00<br>
-    <p>Tirsdag - 8:00 – 17:00<br>
-    <p>Onsdag - 8:00 – 17:00<br>
-    <p>Torsdag - 8:00 – 17:00<br>
-    <p>Fredag - 8:00 – 17:00<br>
-    <p>Lørdag - Lukket<br>
-    <p>Søndag - Lukket</p>
-    <p>Ring til os eller send en forespørgsel for at booke en tid.</p>
-  </div>
-  <img src="/images/contact-map.png" alt="contact-map" style="height: 400px; width: auto">
+
+
 </main>
 
 
@@ -47,5 +61,6 @@
 
 <!-- js der loader fragmenterne-->
 <script src="/js/layoutLoader.js"></script>
+<script src="/js/contact.js"></script>
 </body>
 </html>

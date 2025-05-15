@@ -17,7 +17,8 @@
 }
 
 .booking-form input,
-.booking-form select {
+.booking-form select,
+.booking-form textarea{
     padding: 0.8rem;
     border-radius: 8px;
     border: 1px solid #ccc;

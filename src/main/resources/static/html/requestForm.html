@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Besked</title>
+    <link rel="stylesheet" href="/css/mainCSS.css">
+    <link rel="stylesheet" href="/css/formCSS.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- topbaren -->
+<div id="topbar"></div>
+
+<!-- navbaren -->
+<div id="navbar"></div>
+
+
+<main class="bookinsoleform">
+    <div class="fodindlæg-text">
+        <h1>Send os en besked</h1>
+        <p>Something something.</p>
+    </div>
+
+    <form id="requestForm" action="/bookInsole" method="post" class="booking-form">
+        <label for="name">Navn:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone_number">Telefonnummer:</label>
+        <input type="tel" id="phone_number" name="phone_number" required>
+
+        <label for="message">Besked:</label>
+        <textarea rows="5" id="message" name="message" required>
+        </textarea>
+
+        <button id="create_request" type="submit">Send Besked</button>
+    </form>
+</main>
+
+<!-- footer -->
+<div id="footer"></div>
+
+<!-- js der loader fragmenterne-->
+<script src="/js/layoutLoader.js"></script>
+<script src="/js/createRequest.js"></script>
+</body>
+</html>

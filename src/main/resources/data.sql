@@ -8,9 +8,9 @@ INSERT INTO admin (admin_id, username, password) VALUES
     (1, 'admin', 'test123');
 
 -- Request
-INSERT INTO request (request_id, name, email, phone_number, message, is_seen, created_date) VALUES
-(1, 'Line Madsen', 'line@example.com', '11112222', 'Jeg vil gerne booke tid', false, CURRENT_DATE),
-(2, 'Ole Hansen', 'ole@example.com', '33334444', 'Spørgsmål om behandling', true, CURRENT_DATE);
+INSERT INTO request (name, email, phone_number, message, is_seen, created_date) VALUES
+('Line Madsen', 'line@example.com', '11112222', 'Jeg vil gerne booke tid', false, CURRENT_DATE),
+('Ole Hansen', 'ole@example.com', '33334444', 'Spørgsmål om behandling', true, CURRENT_DATE);
 
 -- Booking
 INSERT INTO booking (booking_id, client_id, treatment, date, start, end_time, description) VALUES
