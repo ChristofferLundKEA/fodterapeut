@@ -4,14 +4,14 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!form) return;
 
     form.addEventListener("submit", function (e) {
-        e.preventDefault(); // Forhindrer siden i at reloade
+        e.preventDefault();
 
         const dateInput = document.getElementById("date");
         const selectedDate = new Date(dateInput.value);
         const day = selectedDate.getDay(); // 2 = tirsdag, 4 = torsdag
 
         if (day !== 2 && day !== 4) {
-            alert("Du kan kun booke en tid tirsdage eller torsdage.");
+            alert("Du kan kun booke en tid tirsdag eller torsdag.");
             return;
         }
 
@@ -21,16 +21,17 @@ document.addEventListener("DOMContentLoaded", function () {
             method: "POST",
             body: formData
         })
-            .then(response => {
-                if (response.ok) {
-                    alert("Bookingen er gennemført! Du hører snart fra os.");
+            .then(response => response.text())
+            .then(result => {
+                if (result === "OK") {
+                    alert("Tak! Din booking er gennemført.");
                     form.reset();
                 } else {
                     alert("Noget gik galt – prøv igen.");
                 }
             })
             .catch(() => {
-                alert("Forbindelsesfejl – prøv igen senere.");
+                alert("Fejl ved forbindelse – prøv igen senere.");
             });
     });
 });

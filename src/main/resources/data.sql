@@ -24,8 +24,8 @@ INSERT INTO client_visit (visit_id, client_id, date, notes) VALUES
 (2, 2, '2025-04-20', 'Anbefalet nye indlæg');
 
 -- Insole booking
-INSERT INTO insole_booking (insole_id, name, email, phone_number, date, start, end_time) VALUES
-(1, 'Kasper Jensen', 'kasper@example.com', '87654321', '2025-05-18', '2025-05-18T09:00:00', '2025-05-18T09:30:00');
+INSERT INTO insole_booking (name, email, phone_number, date, start, end_time) VALUES
+    ('Kasper Jensen', 'kasper@example.com', '87654321', '2025-05-18', '2025-05-18T09:00:00', '2025-05-18T09:30:00');
 
 
 -- Calendar events
