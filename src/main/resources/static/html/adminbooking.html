@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <title>Opret Booking</title>
+    <link rel="stylesheet" href="/css/mainCSS.css">
+    <link rel="stylesheet" href="/css/formCSS.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- topbar og navbar -->
+<div id="topbar"></div>
+<div id="navbar"></div>
+
+<main class="booking-admin-section">
+    <form action="/admin/book" method="post" class="booking-form" id="adminBookingForm">
+
+        <h2>Opret ny booking</h2>
+
+        <label for="treatment">Behandling:</label>
+        <select name="treatment" id="treatment" required>
+            <option value="">Vælg behandling</option>
+            <option value="Fodbehandling">Fodbehandling</option>
+            <option value="Indlægsfremstilling">Indlægsfremstilling</option>
+            <option value="Laserbehandling">Laserbehandling</option>
+        </select>
+
+        <label for="date">Dato:</label>
+        <input type="date" id="date" name="date" required>
+
+        <label for="start">Starttid:</label>
+        <input type="time" id="start" name="start" required>
+
+        <label for="endTime">Sluttid:</label>
+        <input type="time" id="endTime" name="endTime" required>
+
+        <label for="description">Beskrivelse:</label>
+        <textarea id="description" name="description" rows="4" placeholder="Skriv evt. noter..."></textarea>
+
+        <label for="clientInput">Søg klient:</label>
+        <input list="clientList" id="clientInput" name="clientName" placeholder="Skriv navn..." required>
+        <input type="hidden" name="clientId" id="clientId">
+        <datalist id="clientList"></datalist>
+
+        <button type="submit">Opret booking</button>
+    </form>
+</main>
+
+<div id="footer"></div>
+
+<script src="/js/layoutLoader.js"></script>
+<script src="/js/adminBooking.js"></script> <!-- Den JS du skal lave næste -->
+</body>
+</html>
