@@ -1,67 +1,72 @@
+* {
+    font-family: 'Playfair Display', serif;
+}
+
 .dashboard-layout {
     display: flex;
-    height: 100%;
-    font-family: sans-serif;
+    min-height: 100vh;
+    background-color: #fefaf6;
 }
 
 .sidebar {
-    background: #d1c8c1;
-    width: 240px;
-    padding: 20px;
-    box-sizing: border-box;
+    width: 80px; /* smal sidebar */
+    background-color: #7a5c55;
+    padding: 2rem 0.5rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    height: 100vh;
 }
 
-.welcome {
-    background: #6d4c3d;
-    color: white;
-    font-weight: bold;
-    padding: 20px;
-    margin: -20px -20px 20px -20px;
-    text-align: center;
+
+.sidebar-bottom {
+    margin-bottom: 5rem;
+    display: flex;
+    justify-content: center;
 }
 
-.nav-links {
+
+
+.booking-admin-section {
+    margin-left: 80px;
+    padding: 3rem 2rem;
+    display: flex;
+}
+
+.container {
+    margin-left: 80px;
+}
+.icon-links {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 2rem;
+    margin-top: 2rem;
 }
 
-.nav-item {
+.icon-links a {
+    color: #5e3c2d;
+    font-size: 1.6rem;
     text-decoration: none;
-    color: #6d4c3d;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    transition: transform 0.2s ease, color 0.2s ease;
 }
 
-.booking-btn {
-    background: #6d4c3d;
-    color: white;
-    font-weight: bold;
-    border: none;
-    padding: 15px;
-    border-radius: 25px;
-    cursor: pointer;
-    margin-top: 20px;
+.icon-links a:hover {
+    transform: scale(1.2);
+    color: #3a2418;
 }
 
+/* MAIN CONTENT */
 .main-content {
-    background: #f9f9f9;
+    margin-left: 80px;
     flex-grow: 1;
-    padding: 30px;
+    padding: 3rem;
+    background-color: #fefaf6;
+    min-height: 50vh;
 }
 
-.dashboard-title {
-    color: #6d4c3d;
-    font-size: 2rem;
-    font-weight: bold;
-    padding: 20px;
-    margin: -40px -20px 20px -20px;
-}
 
 .info-cards {
     display: flex;
@@ -77,11 +82,10 @@
     text-align: center;
     font-weight: bold;
     color: #333;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-/* REQUEST TABLES */
-
+/* REQUESTS */
 .requests-section {
     background-color: #fefaf6;
 }
@@ -93,10 +97,7 @@
 }
 
 .requests-table {
-    /*width: 80%;*/
-    /*margin: 0 auto 3rem auto;*/
     border-collapse: collapse;
-    /*font-size: 1.2rem;*/
 }
 
 .requests-table th,

@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let clients = [];
 
-    // 🔹 Hent klienter fra backend
+    //Hent klienter fra backend
     fetch("/api/clients")
         .then(response => response.json())
         .then(data => {
@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
             data.forEach(client => {
                 const option = document.createElement("option");
                 option.value = client.name;
-                option.dataset.id = client.id;
+                option.dataset.id = client.client_id;
                 datalist.appendChild(option);
             });
         })
@@ -21,9 +21,9 @@ document.addEventListener("DOMContentLoaded", function () {
             console.error("Kunne ikke hente klienter:", err);
         });
 
-    // 🔹 Når navnet matches, sæt hidden id-felt
+
     clientInput.addEventListener("change", () => {
         const selectedClient = clients.find(client => client.name === clientInput.value);
-        hiddenClientId.value = selectedClient ? selectedClient.id : "";
+        hiddenClientId.value = selectedClient ? selectedClient.client_id : "";
     });
 });

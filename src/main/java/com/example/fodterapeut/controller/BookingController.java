@@ -43,6 +43,6 @@ public class BookingController {
 
         bookingRepository.save(booking);
 
-        return "redirect:/admin/dashboard.html";
+        return "redirect:/html/dashboard.html";
     }
 }

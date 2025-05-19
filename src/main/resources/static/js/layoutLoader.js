@@ -10,3 +10,5 @@ window.addEventListener("DOMContentLoaded", () => {
   loadFragment("navbar", "/fragments/navbar.html");
   loadFragment("footer", "/fragments/footer.html");
 });
+
+

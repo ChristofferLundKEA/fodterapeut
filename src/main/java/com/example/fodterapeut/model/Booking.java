@@ -1,5 +1,6 @@
 package com.example.fodterapeut.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -24,6 +25,13 @@ public class Booking {
     private LocalDateTime start;
     private LocalDateTime endTime;
     private String description;
+    @JsonIgnore
+    @ManyToOne
+    @JoinColumn(name = "client_id")
+    private Client client;
+
+    @OneToMany(mappedBy = "booking", cascade = CascadeType.ALL)
+    private List<CalenderEvent> calenderEvents;
 
     public int getBooking_id() {
         return booking_id;
@@ -88,11 +96,4 @@ public class Booking {
     public void setCalenderEvents(List<CalenderEvent> calenderEvents) {
         this.calenderEvents = calenderEvents;
     }
-
-    @ManyToOne
-    @JoinColumn(name = "client_id")
-    private Client client;
-
-    @OneToMany(mappedBy = "booking", cascade = CascadeType.ALL)
-    private List<CalenderEvent> calenderEvents;
 }

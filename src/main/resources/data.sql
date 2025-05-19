@@ -12,11 +12,10 @@ INSERT INTO request (name, email, phone_number, message, is_seen, created_date) 
 ('Line Madsen', 'line@example.com', '11112222', 'Jeg vil gerne booke tid', false, CURRENT_DATE),
 ('Ole Hansen', 'ole@example.com', '33334444', 'Spørgsmål om behandling', true, CURRENT_DATE);
 
--- Booking
-INSERT INTO booking (booking_id, client_id, treatment, date, start, end_time, description) VALUES
-(1, 1, 'Fodbehandling', '2025-05-10', '2025-05-10T10:00:00', '2025-05-10T11:00:00', 'Første besøg'),
-(2, 2, 'Indlægskonsultation', '2025-05-12', '2025-05-12T13:30:00', '2025-05-12T14:15:00', 'Allergi-anamnese');
-
+-- Booking (uden booking_id – lader databasen generere det)
+INSERT INTO booking (client_id, treatment, date, start, end_time, description) VALUES
+(1, 'Fodbehandling', DATE '2025-05-10', TIMESTAMP '2025-05-10 10:00:00', TIMESTAMP '2025-05-10 11:00:00', 'Første besøg'),
+(2, 'Indlægskonsultation', DATE '2025-05-12', TIMESTAMP '2025-05-12 13:30:00', TIMESTAMP '2025-05-12 14:15:00', 'Allergi-anamnese');
 
 -- Client visits
 INSERT INTO client_visit (visit_id, client_id, date, notes) VALUES

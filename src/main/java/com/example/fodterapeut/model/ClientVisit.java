@@ -1,5 +1,6 @@
 package com.example.fodterapeut.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -18,6 +19,7 @@ public class ClientVisit {
     private LocalDate date;
     private String notes;
 
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "client_id")
     private Client client;

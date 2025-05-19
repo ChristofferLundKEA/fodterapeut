@@ -1,14 +1,16 @@
 .booking-form {
-    max-width: 650px;
-    margin: 2rem auto;
-    padding: 1rem;
     background-color: #fffdfb;
+    padding: 2rem 2.5rem;
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    max-width: 600px;
+    min-width: 600px;
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
 }
+
 
 .booking-form label {
     font-weight: bold;
@@ -41,3 +43,39 @@
 .booking-form button:hover {
     background-color: #3a2418;
 }
+
+.booking-form textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+
+/* CENTRERET FORMULAR – til bookinsoleform */
+.bookinsoleform {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 1rem;
+    background-color: #fefaf6;
+    margin-right: 200px;
+}
+
+/* VENSTRESTILLET FORMULAR – til booking-admin-section */
+.booking-admin-section {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 4rem 2rem;
+    background-color: #fefaf6;
+    gap: 2rem;
+}
+.bookinsoleform {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 4rem 2rem;
+    background-color: #fefaf6;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
