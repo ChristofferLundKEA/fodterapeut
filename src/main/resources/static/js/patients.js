@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function loadClients() {
-    fetch("/api/clients")
+    fetch("/clients")
         .then(response => response.json())
         .then(clients => {
             const listDiv = document.getElementById("patientList");
@@ -108,7 +108,7 @@ function updateClient(clientId) {
         insurance: document.getElementById("editInsurance").value === "true"
     };
 
-    fetch(`/api/clients/${clientId}`, {
+    fetch(`/clients/${clientId}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(updatedClient)
@@ -126,7 +126,7 @@ function deleteClient(clientId) {
     const confirmed = confirm("Er du sikker på, at du vil slette denne patient?");
     if (!confirmed) return;
 
-    fetch(`/api/clients/${clientId}`, {
+    fetch(`/clients/${clientId}`, {
         method: "DELETE"
     }).then(response => {
         if (response.ok) {
@@ -149,7 +149,7 @@ function createNewClient() {
         insurance: document.getElementById("newInsurance").value === "true"
     };
 
-    fetch("/api/clients", {
+    fetch("/clients", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(newClient)
@@ -165,7 +165,7 @@ function createNewClient() {
 }
 
 function loadHistory(clientId) {
-    fetch(`/api/clients/${clientId}/history`)
+    fetch(`/clients/${clientId}/history`)
         .then(response => response.json())
         .then(history => {
             const list = document.getElementById("historyList");
@@ -191,7 +191,7 @@ function addHistory(clientId) {
 
     const historyEntry = { date, note };
 
-    fetch(`/api/clients/${clientId}/history`, {
+    fetch(`/clients/${clientId}/history`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(historyEntry)
