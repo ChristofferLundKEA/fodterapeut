@@ -1,5 +1,7 @@
 package com.example.fodterapeut.model;
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -7,7 +9,8 @@ import java.time.LocalTime;
 import java.util.List;
 
 
-
+@Getter
+@Setter
 @Entity
 public class InsoleBooking {
 

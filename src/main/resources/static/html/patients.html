@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DASHBOARD</title>
+    <link rel="stylesheet" href="/css/dashCSS.css">
+    <link rel="stylesheet" href="/css/patients.css">
+</head>
+<body>
+
+<div class="dashboard-layout">
+    <div id="sidebar"></div>
+
+    <main class="container">
+        <!-- VENSTRE SIDE: Patientliste -->
+        <div class="patient-list">
+            <h2>Patienter</h2>
+
+            <div class="patient-controls">
+                <button id="openModalBtn">➕ Opret ny patient</button>
+                <input type="text" id="searchInput" placeholder="Søg patienter...">
+            </div>
+
+            <div id="patientList"></div>
+        </div>
+
+        <!-- HØJRE SIDE: Detaljer -->
+        <div class="patient-details" id="patientDetails">
+            <h2>Vælg en patient</h2>
+            <p>Her vil kontaktoplysninger og historik blive vist.</p>
+        </div>
+    </main>
+
+    <!-- MODAL TIL OPRETTELSE -->
+    <div id="patientModal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <h2>Ny patient</h2>
+
+            <label>Navn:</label><br>
+            <input type="text" id="newName"><br>
+
+            <label>Email:</label><br>
+            <input type="text" id="newEmail"><br>
+
+            <label>Telefon:</label><br>
+            <input type="text" id="newPhone"><br>
+
+            <label>CPR:</label><br>
+            <input type="text" id="newCpr"><br>
+
+            <label>Allergier:</label><br>
+            <input type="text" id="newAllergies"><br>
+
+            <label>Forsikring:</label><br>
+            <select id="newInsurance">
+                <option value="true">Ja</option>
+                <option value="false">Nej</option>
+            </select><br><br>
+
+            <button onclick="createNewClient()">✅ Opret patient</button>
+        </div>
+    </div>
+</div>
+
+<script src="/js/dash-layout-loader.js"></script>
+<script src="/js/patients.js"></script>
+</body>
+</html>
