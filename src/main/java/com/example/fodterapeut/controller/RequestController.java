@@ -45,4 +45,16 @@ public class RequestController {
             throw new RuntimeException(e);
         }
     }
+
+    @PostMapping("/updateSeenStatus")
+    public ResponseEntity<?> updateSeenStatus(@RequestBody List<Request> updates) {
+        for (Request update : updates) {
+            requestRepository.findById(update.getRequest_id()).ifPresent(existing -> {
+                existing.setIs_seen(update.getIs_seen());
+                requestRepository.save(existing);
+            });
+        }
+        return ResponseEntity.ok().build();
+    }
+
 }
