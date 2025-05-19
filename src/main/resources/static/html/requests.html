@@ -12,8 +12,9 @@
 
     <main class="main-content">
         <h1 class="dashboard-title">Requests</h1>
+
         <section class="requests-section">
-            <h2>📥 Unseen</h2>
+            <h2>📥 Ny</h2>
             <table id="unseen-requests" class="requests-table">
                 <thead>
                 <tr>
@@ -22,6 +23,7 @@
                     <th>Telefon</th>
                     <th>Besked</th>
                     <th>Dato</th>
+                    <th>✓</th> <!-- Checkmark column -->
                 </tr>
                 </thead>
                 <tbody></tbody>
@@ -29,7 +31,7 @@
         </section>
 
         <section class="requests-section" style="margin-top: 40px;">
-            <h2>✅ Seen</h2>
+            <h2>✅ Set</h2>
             <table id="seen-requests" class="requests-table">
                 <thead>
                 <tr>
@@ -38,13 +40,19 @@
                     <th>Telefon</th>
                     <th>Besked</th>
                     <th>Dato</th>
+                    <th>✓</th> <!-- Checkmark column -->
                 </tr>
                 </thead>
                 <tbody></tbody>
             </table>
         </section>
+
+        <div style="text-align: center; margin-top: 2rem;">
+            <button id="update-seen" style="padding: 10px 20px;">Opdater '✓' status</button>
+        </div>
     </main>
 </div>
+
 
 <script src="/js/dash-layout-loader.js"></script>
 <script src="/js/request.js"></script>
