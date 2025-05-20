@@ -51,7 +51,7 @@ public class ClientController {
         return ResponseEntity.notFound().build();
     }
 
-    @PostMapping
+    @PostMapping("/clients")
     public ResponseEntity<Client> createClient(@RequestBody Client client) {
         return ResponseEntity.ok(clientRepository.save(client));
     }
