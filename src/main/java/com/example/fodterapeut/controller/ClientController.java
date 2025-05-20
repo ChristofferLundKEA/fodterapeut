@@ -22,7 +22,7 @@ public class ClientController {
         this.clientRepository = clientRepository;
     }
 
-    @GetMapping
+    @GetMapping("/clients")
     public List<Client> getAllClients() {
         return clientRepository.findAll();
     }
