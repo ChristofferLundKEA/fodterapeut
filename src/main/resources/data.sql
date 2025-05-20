@@ -1,7 +1,7 @@
 -- Clients
-INSERT INTO client (client_id, name, email, phone_number, cpr, allergies, insurance) VALUES
-(1, 'Laura Andresen', 'laura@example.com', '12345678', '010101-1234', 'None', 'Yes'),
-(2, 'Kasper Jensen', 'kasper@example.com', '87654321', '020202-4321', 'Pollen', 'No');
+INSERT INTO client (name, email, phone_number, cpr, allergies, insurance) VALUES
+('Laura Andresen', 'laura@example.com', '12345678', '010101-1234', 'None', 'Yes'),
+('Kasper Jensen', 'kasper@example.com', '87654321', '020202-4321', 'Pollen', 'No');
 
 -- Admin
 INSERT INTO admin (admin_id, username, password) VALUES

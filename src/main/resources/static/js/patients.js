@@ -24,6 +24,8 @@ function loadClients() {
     fetch("/clients")
         .then(response => response.json())
         .then(clients => {
+            console.log("Modtagne klienter:", clients);
+            allClients = clients;
             const listDiv = document.getElementById("patientList");
             listDiv.innerHTML = "";
 

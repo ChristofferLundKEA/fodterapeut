@@ -1,5 +1,6 @@
 package com.example.fodterapeut.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -14,7 +15,8 @@ public class Client {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int client_id;
+    @Column(name = "client_id")
+    private int id;
 
     private String name;
     private String email;
@@ -24,8 +26,10 @@ public class Client {
     private boolean insurance;
 
     @OneToMany(mappedBy = "client", cascade = CascadeType.ALL)
+    @JsonIgnore
     private List<Booking> bookings;
 
     @OneToMany(mappedBy = "client", cascade = CascadeType.ALL)
+    @JsonIgnore
     private List<ClientVisit> visits;
 }

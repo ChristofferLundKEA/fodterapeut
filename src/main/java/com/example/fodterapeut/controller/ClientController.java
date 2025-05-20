@@ -27,7 +27,7 @@ public class ClientController {
         return clientRepository.findAll();
     }
 
-    @PutMapping("/{id}")
+    @PutMapping("/clients/{id}")
     public ResponseEntity<Client> updateClient(@PathVariable int id, @RequestBody Client updatedClient) {
         return clientRepository.findById(id)
                 .map(client -> {
@@ -42,7 +42,7 @@ public class ClientController {
                 .orElse(ResponseEntity.notFound().build());
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/clients/{id}")
     public ResponseEntity<Void> deleteClient(@PathVariable int id) {
         if (clientRepository.existsById(id)) {
             clientRepository.deleteById(id);
@@ -60,14 +60,14 @@ public class ClientController {
     private final Map<Integer, List<ClientHistory>> memoryHistory = new HashMap<>();
 
     // Her hentes historik for en klient
-    @GetMapping("/{id}/history")
+    @GetMapping("/clients/{id}/history")
     public ResponseEntity<List<ClientHistory>> getHistory(@PathVariable int id) {
         List<ClientHistory> histories = memoryHistory.getOrDefault(id, new ArrayList<>());
         return ResponseEntity.ok(histories);
     }
 
     // Her tilføjes en ny historiknote
-    @PostMapping("/{id}/history")
+    @PostMapping("/clients/{id}/history")
     public ResponseEntity<ClientHistory> addHistory(@PathVariable int id, @RequestBody ClientHistory history) {
         memoryHistory.computeIfAbsent(id, k -> new ArrayList<>()).add(history);
         return ResponseEntity.ok(history);
