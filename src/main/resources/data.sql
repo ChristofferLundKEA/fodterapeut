@@ -28,7 +28,14 @@ INSERT INTO insole_booking (name, email, phone_number, date, start, end_time) VA
 
 
 -- Calendar events
-INSERT INTO calender_event (event_id, booking_id, insole_id, title, start, end_time, all_day, description) VALUES
-(1, 1, null, 'Fodbehandling - Laura', '2025-05-10T10:00:00', '2025-05-10T11:00:00', false, 'note1'),
-(2, null, 1, 'Indlæg – Kasper', '2025-05-18T09:00:00', '2025-05-18T09:30:00', false, 'note2');
+INSERT INTO calender_event (title, start, end_time, all_day, description) VALUES
+    ( 'Fodbehandling - Emma', '2025-05-20T13:00:00', '2025-05-20T14:00:00', false, 'note3'),
+    ( 'Indlæg – Mads', '2025-05-21T10:00:00', '2025-05-21T10:45:00', false, 'note4'),
+    ( 'Fodbehandling - Sofie', '2025-05-23T09:30:00', '2025-05-23T10:30:00', false, 'note5'),
+    ( 'Indlæg – Jonas', '2025-05-27T11:00:00', '2025-05-27T11:30:00', false, 'note6'),
+    ( 'Fodbehandling - Ida', '2025-05-30T14:00:00', '2025-05-30T15:00:00', false, 'note7'),
+    ( 'Indlæg – Oliver', '2025-06-03T08:30:00', '2025-06-03T09:15:00', false, 'note8'),
+    ( 'Fodbehandling - Anna', '2025-06-06T12:00:00', '2025-06-06T13:00:00', false, 'note9'),
+    ( 'Indlæg – Freja', '2025-06-11T10:00:00', '2025-06-11T10:45:00', false, 'note10');
+
 
