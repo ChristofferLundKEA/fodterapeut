@@ -17,12 +17,4 @@ document.addEventListener("DOMContentLoaded", function () {
             console.error("Fejl ved hentning af klienter:", err);
         });
 
-    // Sikring: tjek om en gyldig klient er valgt
-    form.addEventListener("submit", function (e) {
-        const selectedId = clientSelect.value;
-        if (!selectedId || isNaN(parseInt(selectedId))) {
-            e.preventDefault();
-            alert("⛔ Du skal vælge en klient fra listen!");
-        }
-    });
 });
