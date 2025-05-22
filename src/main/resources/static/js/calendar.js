@@ -51,13 +51,13 @@ function updateEvent() {
     })
         .then(() => {
             closeModal();
-            location.reload(); // Opdater kalenderen
+            location.reload();
         });
 }
 
 function deleteEvent() {
     const id = document.getElementById("eventId").value;
-    console.log("Sletter event med id:", id); // ← tilføj denne linje
+    console.log("Sletter event med id:", id);
 
     fetch(`/api/events/${id}`, {
         method: "DELETE"
