@@ -1,3 +1,8 @@
+.hidden {
+    display: none !important;
+}
+
+
 body {
     font-family: 'Open Sans', sans-serif;
 }
@@ -39,3 +44,90 @@ body {
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
 }
 
+
+/* Modal baggrund (grå overlay) */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* mørk gennemsigtighed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+/* Selve modalboksen */
+.modal-content {
+    background-color: #fffdfb;
+    padding: 2rem;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Luk-knap */
+.modal-content .close {
+    float: right;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+/* Formularlayout */
+.modal-content label {
+    display: block;
+    margin-top: 1rem;
+    font-weight: bold;
+    color: #5e3c2d;
+}
+
+.modal-content input,
+.modal-content textarea {
+    width: 100%;
+    padding: 0.7rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-top: 0.3rem;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+}
+
+.modal-content textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Knapper */
+.btn.update-button {
+    /* stylingen */
+    margin-top: 1.5rem;
+    padding: 0.9rem 1.2rem;
+    background-color: #ff4900;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+.btn.update-button:hover {
+    background-color: #c3633d;
+}
+
+.btn.delete-button {
+    margin-top: 1.5rem;
+    padding: 0.9rem 1.2rem;
+    background-color: #bc0b0b;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+.btn.delete-button:hover {
+    background-color: #d44545;
+}

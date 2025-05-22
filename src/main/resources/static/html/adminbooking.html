@@ -42,9 +42,11 @@
                 <label for="description">Beskrivelse:</label>
                 <textarea id="description" name="description" rows="4" placeholder="Skriv evt. noter..."></textarea>
 
-                <label for="clientInput">Søg klient:</label>
-                <input type="text" id="clientInput" name="clientName" placeholder="Søg klient..." autocomplete="off" required>
-                <input type="hidden" name="clientId" id="clientId">
+                <label for="clientSelect">Vælg klient:</label>
+                <select name="clientId" id="clientSelect" required>
+                    <option value="">-- Vælg en klient --</option>
+                </select>
+
 
                 <button type="submit">Opret booking</button>
             </form>

@@ -30,7 +30,13 @@ public class BookingController {
         LocalTime startTime = LocalTime.parse(request.getParameter("start"));
         LocalTime endTime = LocalTime.parse(request.getParameter("endTime"));
         String description = request.getParameter("description");
-        int clientId = Integer.parseInt(request.getParameter("clientId"));
+        String clientIdParam = request.getParameter("clientId");
+        if (clientIdParam == null || clientIdParam.isBlank() || clientIdParam.equals("undefined")) {
+            throw new IllegalArgumentException("Ugyldigt clientId – vælg en klient fra listen");
+        }
+
+        int clientId = Integer.parseInt(clientIdParam);
+
 
         Client client = clientRepository.findById(clientId).orElseThrow(() -> new RuntimeException("Client not found"));
 

@@ -24,9 +24,34 @@
 
     <div id="footer"></div>
 </div>
+<div id="eventModal" class="modal hidden">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">×</span>
+        <h2>Rediger aftale</h2>
+
+        <input type="hidden" id="eventId">
+
+        <label for="eventTitle">Titel:</label>
+        <input type="text" id="eventTitle">
+
+        <label for="eventStart">Start:</label>
+        <input type="datetime-local" id="eventStart">
+
+        <label for="eventEnd">Slut:</label>
+        <input type="datetime-local" id="eventEnd">
+
+        <label for="eventDescription">Beskrivelse:</label>
+        <textarea id="eventDescription"></textarea>
+
+        <button class="btn update-button" id="updateButton" onclick="updateEvent()">Opdater</button>
+        <button class="btn delete-button" id="deleteButton" onclick="deleteEvent()">Slet</button>
+
+    </div>
+</div>
 
 <script src="/js/dash-layout-loader.js"></script>
 <script src="/js/calendar.js"></script>
 
 </body>
+
 </html>
