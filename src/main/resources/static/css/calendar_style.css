@@ -15,3 +15,27 @@ body {
 .fc-timegrid-slot {
     height: 40px !important;
 }
+
+.booking-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.booking-form {
+    flex: 1;
+    min-width: 300px;
+    max-width: 55%;
+}
+
+.booking-calendar {
+    flex: 1;
+    min-width: 300px;
+    max-width: 45%;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+

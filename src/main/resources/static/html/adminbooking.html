@@ -5,51 +5,62 @@
     <title>Opret Booking</title>
     <link rel="stylesheet" href="/css/dashCSS.css">
     <link rel="stylesheet" href="/css/formCSS.css">
+    <link rel="stylesheet" href="/css/calendar_style.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+
+    <!-- FullCalendar -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
 </head>
 <body>
 
-
 <div class="dashboard-layout">
     <div id="sidebar"></div>
+
     <main class="booking-admin-section">
+        <div class="booking-container">
+            <!-- Formular til venstre -->
+            <form action="/admin/book" method="post" class="booking-form" id="adminBookingForm">
+                <h2>Opret ny booking</h2>
 
-    <form action="/admin/book" method="post" class="booking-form" id="adminBookingForm">
+                <label for="treatment">Behandling:</label>
+                <select name="treatment" id="treatment" required>
+                    <option value="">Vælg behandling</option>
+                    <option value="Fodbehandling">Fodbehandling</option>
+                    <option value="Indlægsfremstilling">Indlægsfremstilling</option>
+                    <option value="Laserbehandling">Laserbehandling</option>
+                </select>
 
-        <h2>Opret ny booking</h2>
+                <label for="date">Dato:</label>
+                <input type="date" id="date" name="date" required>
 
-        <label for="treatment">Behandling:</label>
-        <select name="treatment" id="treatment" required>
-            <option value="">Vælg behandling</option>
-            <option value="Fodbehandling">Fodbehandling</option>
-            <option value="Indlægsfremstilling">Indlægsfremstilling</option>
-            <option value="Laserbehandling">Laserbehandling</option>
-        </select>
+                <label for="start">Starttid:</label>
+                <input type="time" id="start" name="start" required>
 
-        <label for="date">Dato:</label>
-        <input type="date" id="date" name="date" required>
+                <label for="endTime">Sluttid:</label>
+                <input type="time" id="endTime" name="endTime" required>
 
-        <label for="start">Starttid:</label>
-        <input type="time" id="start" name="start" required>
+                <label for="description">Beskrivelse:</label>
+                <textarea id="description" name="description" rows="4" placeholder="Skriv evt. noter..."></textarea>
 
-        <label for="endTime">Sluttid:</label>
-        <input type="time" id="endTime" name="endTime" required>
+                <label for="clientInput">Søg klient:</label>
+                <input type="text" id="clientInput" name="clientName" placeholder="Søg klient..." autocomplete="off" required>
+                <input type="hidden" name="clientId" id="clientId">
 
-        <label for="description">Beskrivelse:</label>
-        <textarea id="description" name="description" rows="4" placeholder="Skriv evt. noter..."></textarea>
+                <button type="submit">Opret booking</button>
+            </form>
 
-        <label for="clientInput">Søg klient:</label>
-        <input list="clientList" id="clientInput" name="clientName" placeholder="Skriv navn..." required>
-        <input type="hidden" name="clientId" id="clientId">
-        <datalist id="clientList"></datalist>
+            <!-- Kalender til højre -->
+            <div class="booking-calendar">
+                <div id="calendarDiv"></div>
+            </div>
+        </div>
+    </main>
 
-        <button type="submit">Opret booking</button>
-    </form>
-</main>
-
-<div id="footer"></div>
+    <div id="footer"></div>
+</div>
 
 <script src="/js/dash-layout-loader.js"></script>
 <script src="/js/adminBooking.js"></script>
+<script src="/js/calendar.js"></script>
 </body>
 </html>

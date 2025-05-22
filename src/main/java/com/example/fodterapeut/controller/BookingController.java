@@ -1,6 +1,7 @@
 package com.example.fodterapeut.controller;
 
 import com.example.fodterapeut.model.Booking;
+import com.example.fodterapeut.model.CalenderEvent;
 import com.example.fodterapeut.model.Client;
 import com.example.fodterapeut.repository.BookingRepository;
 import com.example.fodterapeut.repository.ClientRepository;
@@ -41,8 +42,21 @@ public class BookingController {
         booking.setDescription(description);
         booking.setClient(client);
 
+        // Opret kalender-event og knyt det til bookingen
+        CalenderEvent event = new CalenderEvent();
+        event.setTitle(treatment + " - " + client.getName());
+        event.setStart(booking.getStart());
+        event.setEnd(booking.getEndTime());
+        event.setDescription(description);
+        event.setAllDay(false);
+        event.setBooking(booking); // VIGTIGT: forbind event med booking
+
+        // Tilføj event til bookingens event-liste
+        booking.setCalenderEvents(java.util.List.of(event)); // opret ny liste med kun dette ene event
+
+        // Gem både booking og event (CascadeType.ALL)
         bookingRepository.save(booking);
 
-        return "redirect:/html/dashboard.html";
+        return "redirect:/html/adminbooking.html";
     }
 }
