@@ -72,5 +72,4 @@ public class ClientController {
         memoryHistory.computeIfAbsent(id, k -> new ArrayList<>()).add(history);
         return ResponseEntity.ok(history);
     }
-
 }
