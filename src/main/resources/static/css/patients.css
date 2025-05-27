@@ -144,46 +144,80 @@ body {
     background-color: #442b21;
 }
 
-/* Modal */
+/* Modal baggrund (overlay) */
 .modal {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0, 0, 0, 0.5); /* mørk gennemsigtighed */
     display: flex;
-    align-items: center;
     justify-content: center;
-    z-index: 10;
+    align-items: center;
+    z-index: 999;
 }
 
 .hidden {
     display: none;
 }
 
+/* Modal-boksen */
 .modal-content {
-    background-color: white;
+    background-color: #fffdfb;
     padding: 2rem;
-    border-radius: 10px;
-    width: 400px;
-    max-width: 90%;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    border-radius: 12px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    font-family: 'Open Sans', sans-serif;
     position: relative;
 }
 
-.modal-content h2 {
-    margin-top: 0;
-}
-
-.modal-close {
+/* Luk-knap */
+.modal-content .close {
+    background-color: #8c8c8c;
     position: absolute;
     top: 1rem;
     right: 1rem;
-    background: none;
-    border: none;
     font-size: 1.5rem;
+    border: none;
     cursor: pointer;
+}
+
+/* Labels og inputs */
+.modal-content label {
+    display: block;
+    margin-top: 1rem;
+    font-weight: bold;
+    color: #5e3c2d;
+}
+
+.modal-content input,
+.modal-content select {
+    width: 100%;
+    padding: 0.7rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-top: 0.3rem;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+}
+
+/* Opret-knap */
+.modal-content button {
+    margin-top: 1.5rem;
+    padding: 0.9rem 1.2rem;
+    background-color: #84cf3d;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.modal-content button:hover {
+    background-color: #c3633d;
 }
 
 /* Tab-indhold følger samme layout som patientdetaljer */

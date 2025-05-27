@@ -35,31 +35,31 @@
     <!-- MODAL TIL OPRETTELSE -->
     <div id="patientModal" class="modal hidden">
         <div class="modal-content">
-            <span class="close" id="closeModal">&times;</span>
+            <button class="close" id="closeModal">&times;</button>
             <h2>Ny patient</h2>
 
-            <label>Navn:</label><br>
-            <input type="text" id="newName"><br>
+            <label>Navn:</label>
+            <input type="text" id="newName">
 
-            <label>Email:</label><br>
-            <input type="text" id="newEmail"><br>
+            <label>Email:</label>
+            <input type="text" id="newEmail">
 
-            <label>Telefon:</label><br>
-            <input type="text" id="newPhone"><br>
+            <label>Telefon:</label>
+            <input type="text" id="newPhone">
 
-            <label>CPR:</label><br>
-            <input type="text" id="newCpr"><br>
+            <label>CPR:</label>
+            <input type="text" id="newCpr">
 
-            <label>Allergier:</label><br>
-            <input type="text" id="newAllergies"><br>
+            <label>Allergier:</label>
+            <input type="text" id="newAllergies">
 
-            <label>Forsikring:</label><br>
+            <label>Forsikring:</label>
             <select id="newInsurance">
                 <option value="true">Ja</option>
                 <option value="false">Nej</option>
-            </select><br><br>
+            </select>
 
-            <button onclick="createNewClient()">✅ Opret patient</button>
+            <button onclick="createNewClient()">Opret patient</button>
         </div>
     </div>
 </div>
