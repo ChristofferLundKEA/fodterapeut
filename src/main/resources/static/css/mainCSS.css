@@ -69,42 +69,24 @@ body {
 .navbar {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
-    padding: 0.5rem 3rem 1rem 3rem;
-    background-color: #e8e4e0;
+    align-items: center; /* ændret fra flex-start til center */
+    padding: 0.5rem 3rem;
+    background-color: #aa764e;
+    height: 150px; /* sæt en højde lidt større end logo */
 }
 
 
-.logo {
-    color: #5e3c2d;
-    font-family: 'Playfair Display', serif;
-    line-height: 1.2;
+.logo-img {
+    height: 140px; /* gør logoet mindre for at matche højden */
+    width: auto;
+    object-fit: contain;
 }
-
-.logo-main {
-    font-size: 5rem;
-    font-weight: bold;
-    display: block;
-}
-
-.logo-sub {
-    font-size: 2rem;
-    font-weight: 400;
-    font-style: normal;
-    color: #7a594f;
-    margin-left: 0.2rem;
-    margin-top: -1.2rem;
-    display: block;
-    letter-spacing: 0.5px;
-    line-height: 1;
-}
-
 
 
 .nav-items {
     display: flex;
     align-items: flex-start;
-    border-bottom: 2px solid #cfa99a;
+    border-bottom: 2px solid #6f3b1c;
     margin-top: 2rem;
     padding-bottom: 3px;
 }
@@ -112,7 +94,7 @@ body {
 .nav-items a {
     font-family: 'Playfair Display', serif;
     text-decoration: none;
-    color: #5e3c2d;
+    color: #713d1d;
     font-weight: bold;
     padding: 0.5rem 1rem;
     font-size: 1.3rem;
@@ -123,7 +105,7 @@ body {
 
 .nav-items a:hover {
     background-color: rgba(94, 60, 45, 0.05);
-    color: #3a2418;
+    color: #fcf8f5;
 }
 
 button {
